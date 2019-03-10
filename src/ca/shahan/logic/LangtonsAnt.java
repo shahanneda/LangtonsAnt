@@ -14,7 +14,7 @@ public class LangtonsAnt {
 	static int antX = Main.gameWidth/2;
 	static int antY = Main.gameHeight/2;
 	static int antDirection = 0;
-//	public static ArrayList<int[]> toBeUpdated = new ArrayList<int[]>();
+	public static ArrayList<int[]> toBeUpdated = new ArrayList<int[]>();
 	public static void UpdateGame() {
 		
 		if(board[antX][antY]) {
@@ -26,7 +26,7 @@ public class LangtonsAnt {
 		}
 		
 		board[antX][antY] = !board[antX][antY];
-//		toBeUpdated.add(new int[] {antX,antY});
+		toBeUpdated.add(new int[] {antX,antY});
 		switch(antDirection) {
 			case NORTH:	
 				antY--;

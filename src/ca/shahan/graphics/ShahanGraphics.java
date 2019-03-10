@@ -15,6 +15,7 @@ public class ShahanGraphics {
 		f.setTitle("Shahan's LangtonsAnt");
 		
 		j = new CellPanel();
+		j.setBackground(Color.RED);
 		f.add(j);
 		
 		f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

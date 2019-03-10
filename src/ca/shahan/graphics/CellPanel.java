@@ -28,19 +28,28 @@ public class CellPanel extends JPanel{
 				}else {
 					g.setColor(Color.RED);
 				}
-				g.fillRect((int)(i*(d.getWidth()/Main.gameWidth)), 
-						(int)(j* (d.getHeight()/Main.gameHeight)), 
-						(int)(d.getWidth()/Main.gameWidth),
-						(int)(d.getHeight()/Main.gameHeight));
-			}
-//		 	for(int i = 0; i < LangtonsAnt.toBeUpdated.size(); i++) {
-//				int[] tile = LangtonsAnt.toBeUpdated.get(i);
-//				g.fillRect((int)(tile[0]*(d.getWidth()/Main.gameWidth)), 
-//						(int)(tile[1]* (d.getHeight()/Main.gameHeight)), 
+//				g.fillRect((int)(i*(d.getWidth()/Main.gameWidth)), 
+//						(int)(j* (d.getHeight()/Main.gameHeight)), 
 //						(int)(d.getWidth()/Main.gameWidth),
 //						(int)(d.getHeight()/Main.gameHeight));
-////				LangtonsAnt.toBeUpdated.remove(i);
 			}
+		}
+		for(int i = 0; i < LangtonsAnt.toBeUpdated.size(); i++) {
+	
+	 	
+			int[] tile = LangtonsAnt.toBeUpdated.get(i);
+	 		boolean state = LangtonsAnt.board[tile[0]][tile[1]];
+				if(state) {
+					g.setColor(Color.BLACK);
+				}else {
+					g.setColor(Color.RED);
+				}
+			g.fillRect((int)(tile[0]*(d.getWidth()/Main.gameWidth)), 
+					(int)(tile[1]* (d.getHeight()/Main.gameHeight)), 
+					(int)(d.getWidth()/Main.gameWidth),
+					(int)(d.getHeight()/Main.gameHeight));
+//			LangtonsAnt.toBeUpdated.remove(i);
+		}
 		
 	}
 	

@@ -9,9 +9,9 @@ import ca.shahan.logic.LangtonsAnt;
  */
 public class Main {
 	ShahanGraphics g;
-	long timeBetweenFrames = 1;
-	public static final int gameWidth = 100;
-	public static final int gameHeight = 100;
+	long timeBetweenFrames = 1000000;
+	public static final int gameWidth = 1000;
+	public static final int gameHeight = 1000;
 
 	public static void main(String[] args) {
 		
@@ -19,15 +19,14 @@ public class Main {
 	}
 	
 	Main() {
-		System.out.println("test");
 		g = new ShahanGraphics();
 		GameLoop();
 	}
 	void GameLoop() {
-		long lastUpdateTime = System.currentTimeMillis();
+		long lastUpdateTime = System.nanoTime();
 		while(true) {
-			if(System.currentTimeMillis() - lastUpdateTime >  timeBetweenFrames) {
-				lastUpdateTime = System.currentTimeMillis();
+			if(System.nanoTime() - lastUpdateTime >  timeBetweenFrames) {
+				lastUpdateTime = System.nanoTime();
 				LangtonsAnt.UpdateGame();
 				g.UpdateGame();
 			}
