@@ -9,7 +9,7 @@ import ca.shahan.logic.LangtonsAnt;
  */
 public class Main {
 	ShahanGraphics g;
-	long timeBetweenFrames = 1000000;
+	long timeBetweenFrames = 10000;
 	public static final int gameWidth = 1000;
 	public static final int gameHeight = 1000;
 

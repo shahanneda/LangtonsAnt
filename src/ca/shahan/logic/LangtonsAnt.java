@@ -11,8 +11,8 @@ public class LangtonsAnt {
 	public static final int SOUTH = 2;
 	public static final int WEST = 3;
 	
-	static int antX = Main.gameWidth/2;
-	static int antY = Main.gameHeight/2;
+	static int antX = 300;
+	static int antY = 300;
 	static int antDirection = 0;
 	public static ArrayList<int[]> toBeUpdated = new ArrayList<int[]>();
 	public static void UpdateGame() {
