@@ -39,7 +39,7 @@ public class LangtonsAnt {
 			}
 			
 			board[antX][antY] = !board[antX][antY];
-			toBeUpdated.add(new int[] {antX,antY});
+			toBeUpdated.add(new int[] {antX,antY,ant[3],ant[4],ant[5]});
 			switch(antDirection) {
 				case NORTH:	
 					antY--;
@@ -53,7 +53,7 @@ public class LangtonsAnt {
 				case WEST:
 					antX--;
 			}
-			ants.set(i, new int[] {antX,antY,antDirection});
+			ants.set(i, new int[] {antX,antY,antDirection,ant[3],ant[4],ant[5]});
 				
 		}
 		

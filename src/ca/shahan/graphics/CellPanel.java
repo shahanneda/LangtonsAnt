@@ -14,6 +14,8 @@ import ca.shahan.Main;
 import ca.shahan.logic.LangtonsAnt;
 
 public class CellPanel extends JPanel{
+	public static boolean color = false;
+	public static Color backgroundColor = Color.black;
 	Image img ;
 	float scale = 1.2f;
 	public CellPanel() {
@@ -53,9 +55,11 @@ public class CellPanel extends JPanel{
 			int[] tile = LangtonsAnt.toBeUpdated.get(i);
 	 		boolean state = LangtonsAnt.board[tile[0]][tile[1]];
 				if(state) {
-					g.setColor(Color.BLACK);
+					
+					
+					g.setColor(new Color(tile[2],tile[3],tile[4]));
 				}else {
-					g.setColor(Color.RED);
+					g.setColor(backgroundColor);
 				}
 			g.fillRect((int)(tile[0]*(d.getWidth()/Main.gameWidth)), 
 					(int)(tile[1]* (d.getHeight()/Main.gameHeight)), 
