@@ -14,7 +14,7 @@ import ca.shahan.logic.LangtonsAnt;
 
 
 public class ShahanGraphics {
-	private JPanel j;
+	private CellPanel j;
 	public ShahanGraphics() {
 		JFrame f = new JFrame();
 		JSlider s = new JSlider(1,10);
@@ -69,6 +69,7 @@ public class ShahanGraphics {
 	}
 	
 	public void UpdateGame() {
+		j.UpdateGUI();
 		j.repaint();
 	}
 	

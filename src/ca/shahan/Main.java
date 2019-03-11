@@ -30,10 +30,11 @@ public class Main {
 		
 		while(true) {
 			g.UpdateGame();
+			
 			if(System.nanoTime() - lastUpdateTime >  timeBetweenFrames) {
+				
 				lastUpdateTime = System.nanoTime();
 				LangtonsAnt.UpdateGame();
-				
 			}
 		}
 		
