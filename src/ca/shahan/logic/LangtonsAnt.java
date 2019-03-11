@@ -26,7 +26,10 @@ public class LangtonsAnt {
 			int antX = ant[0];
 			int antY = ant[1];
 			int antDirection = ant[2];
-			
+			if(antX > Main.gameWidth-1 || antY > Main.gameHeight-1 || antX < 0 || antY < 0) {
+				ants.remove(i);
+				continue;
+			}
 			if(board[antX][antY]) {
 				antDirection += 1;
 				antDirection = (antDirection>3)? 0 : antDirection;

@@ -12,6 +12,7 @@ import ca.shahan.Main;
 import ca.shahan.logic.LangtonsAnt;
 
 public class CellPanel extends JPanel{
+	
 	float scale = 1.2f;
 	@Override
 	public void paintComponent(Graphics g){
